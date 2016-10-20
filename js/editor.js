@@ -24,7 +24,7 @@ var Editor = (function(){
 		Builder.applyChanges();
 	}
 
-	return {
+	return { // return nothing becase, every input element has a 'change' listener
 		//setPrimaryColor: this.setPrimaryColor,
 		//setSecondaryColor: this.setSecondaryColor,
 	};
