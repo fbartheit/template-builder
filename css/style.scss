@@ -1,0 +1,34 @@
+$bg-color: #ddaa11;
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background-color: $bg-color;
+}
+
+#all{
+	min-height: 100%;
+}
+
+#tools{
+	border-left:  2px solid black;
+	border-right: 2px solid black;
+	min-height: 840px;
+}
+
+#tools .btn{
+	border-radius: 0px;
+}
+
+#editor{
+	border-right: 2px solid black;
+}
+
+#canvas{
+	width:100%;
+	border: 1px solid #dddddd;
+	height: 800px;
+}
