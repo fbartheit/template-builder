@@ -24,6 +24,7 @@ class AppAsset extends AssetBundle
     public $js = [
 		'js/builder.js',
 		'js/editor.js',
+        'js/rowgenerator.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

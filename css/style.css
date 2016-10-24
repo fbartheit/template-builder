@@ -19,6 +19,36 @@ $bg-color: #ddaa11;
 	border-radius: 0px;
 }
 
+ /* Style the buttons that are used to open and close the accordion panel */
+#tools button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 8px 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+#tools button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+#tools div.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+}
+
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+#tools div.panel.show {
+    display: block;
+}
+
 #editor{
 	border-right: 2px solid black;
 }
@@ -26,5 +56,62 @@ $bg-color: #ddaa11;
 #canvas{
 	width:100%;
 	border: 1px solid #dddddd;
-	height: 800px;
+	min-height: 800px;
+	padding: 0px 15px;
+}
+
+#canvas .glyphicon-plus{
+	border: 1px solid #dddddd;
+	float: right;
+	display: none;
+	cursor: pointer;
+	z-index: 999;
+	padding: 5px;
+	padding-right: -15px;
+	background-color: #ffffff;
+	color: #122edd;
+}
+
+#canvas:hover .glyphicon-plus{
+	border: 1px solid #dddddd;
+	float: right;
+	display: inline;
+}
+
+ /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 600px; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
